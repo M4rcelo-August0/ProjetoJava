@@ -1,4 +1,4 @@
-# 📚 Sistema de Gerenciamento de Biblioteca
+# Sistema de Gerenciamento de Biblioteca
 
 Projeto acadêmico de um sistema desktop para controlar o acervo, os usuários e o **empréstimo e a devolução de livros** de uma biblioteca.
 
@@ -7,29 +7,29 @@ Projeto acadêmico de um sistema desktop para controlar o acervo, os usuários e
 
 ---
 
-## 📑 Sumário
+## Sumário
 
-- [Sobre o projeto](#-sobre-o-projeto)
-- [Objetivos](#-objetivos)
-- [Funcionalidades](#-funcionalidades)
-- [Regras de negócio](#-regras-de-negócio)
-- [Tecnologias utilizadas](#-tecnologias-utilizadas)
-- [Organização do código](#-organização-do-código)
-- [Modelagem (UML)](#-modelagem-uml)
-- [Interfaces do sistema](#-interfaces-do-sistema)
-- [Banco de dados](#-banco-de-dados)
-- [Como executar](#-como-executar)
-- [Nomes](#-nomes)
+- [Sobre o projeto](#sobre-o-projeto)
+- [Objetivos](#objetivos)
+- [Funcionalidades](#funcionalidades)
+- [Regras de negócio](#regras-de-negócio)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Organização do código](#organização-do-código)
+- [Modelagem (UML)](#modelagem-uml)
+- [Interfaces do sistema](#interfaces-do-sistema)
+- [Banco de dados](#banco-de-dados)
+- [Como executar](#como-executar)
+- [Nomes](#nomes)
 
 ---
 
-## 📖 Sobre o projeto
+## Sobre o projeto
 
 Este trabalho foi desenvolvido para aplicar, em um sistema completo, os conceitos de **orientação a objetos**, **modelagem UML**, **banco de dados relacional** e **desenvolvimento em camadas**. O tema escolhido foi uma biblioteca, na qual é preciso cadastrar usuários e livros e controlar quem está com cada exemplar, respeitando as regras de empréstimo.
 
 O sistema foi construído a partir de uma modelagem prévia, com **diagrama de classes** e **diagramas de sequência** para os casos de uso principais (realizar empréstimo e devolver livro).
 
-## 🎯 Objetivos
+## Objetivos
 
 **Objetivo geral:** desenvolver um sistema de gerenciamento de biblioteca que automatize o controle de empréstimos e devoluções de livros.
 
@@ -41,7 +41,7 @@ O sistema foi construído a partir de uma modelagem prévia, com **diagrama de c
 - Identificar empréstimos em atraso e bloquear usuários com pendências.
 - Permitir a consulta do histórico de empréstimos.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 | Módulo | Descrição |
 |---|---|
@@ -55,7 +55,7 @@ O sistema foi construído a partir de uma modelagem prévia, com **diagrama de c
 
 ---
 
-## 📏 Regras de negócio
+## Regras de negócio
 
 As regras abaixo correspondem aos diagramas de sequência **SD01** e **SD02** e estão implementadas no sistema.
 
@@ -100,7 +100,7 @@ Durante o empréstimo, as linhas do usuário/carteira e do livro são travadas (
 
 ---
 
-## 🛠 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 | Tecnologia | Uso |
 |---|---|
@@ -110,7 +110,7 @@ Durante o empréstimo, as linhas do usuário/carteira e do livro são travadas (
 
 ---
 
-## 🗂 Organização do código
+## Organização do código
 
 O projeto usa **arquitetura em camadas** e aplica os padrões **MVC** (Model-View-Controller) e **DAO** (Data Access Object), que separam a interface, as regras de entrada e o acesso ao banco de dados:
 
@@ -131,7 +131,7 @@ Fluxo básico: **View → Controller → DAO → MySQL**.
 
 ---
 
-## 🎨 Modelagem (UML)
+## Modelagem (UML)
 
 Os arquivos originais dos diagramas estão na pasta [`docs/`](docs/) (imagens `.png` e o arquivo editável `.drawio`).
 
@@ -315,7 +315,7 @@ sequenceDiagram
 
 ---
 
-## 🖥 Interfaces do sistema
+## Interfaces do sistema
 
 A interface é feita com janelas simples: formulários com rótulo e campo, listas suspensas carregadas do banco e mensagens de sucesso ou erro em caixas de diálogo.
 
@@ -332,7 +332,7 @@ A interface é feita com janelas simples: formulários com rótulo e campo, list
 
 ---
 
-## 🗄 Banco de dados
+## Banco de dados
 
 **Banco:** `biblioteca_db` (MySQL)
 
@@ -352,19 +352,19 @@ O script de criação está em [`database/schema.sql`](database/schema.sql).
 
 ---
 
-## ▶ Como executar
+## Como executar
 
 **Pré-requisitos:** JDK 21, MySQL e NetBeans. É preciso também o driver *MySQL Connector/J* adicionado ao projeto.
 
 1. Clone o repositório e abra a pasta no **NetBeans**.
-2. Execute o script `database/schema.sql` no MySQL (ele já cria o banco `biblioteca_db` e todas as tabelas). No Workbench: *File → Open SQL Script*, escolha o arquivo e clique no raio ⚡.
+2. Execute o script `database/schema.sql` no MySQL (ele já cria o banco `biblioteca_db` e todas as tabelas). No Workbench: *File → Open SQL Script*, escolha o arquivo e clique no ícone de raio.
 3. Ajuste usuário, senha e porta do banco em `src/sistemabiblioteca/util/Conexao.java`.
 4. Adicione o `.jar` do *MySQL Connector/J* em *Properties → Libraries*.
 5. Execute a classe `sistemabiblioteca.app.Main` (tecla `F6`).
 
 ---
 
-## 👥 Nomes
+## Nomes
 
 | Nome | RGM |
 |---|---|
