@@ -15,7 +15,7 @@ public class Conexao {
             + "?useSSL=false&serverTimezone=America/Sao_Paulo";
 
     private static final String USUARIO = "root";
-    private static final String SENHA = "senhabd@2026";
+    private static final String SENHA = "sua_senha";
 
     public static Connection conectar() throws SQLException {
         return DriverManager.getConnection(URL, USUARIO, SENHA);
