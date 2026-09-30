@@ -187,7 +187,7 @@ SET character_set_client = @saved_cs_client;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
 /*!50003 SET character_set_client  = utf8mb4 */ ;
 /*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
@@ -241,7 +241,7 @@ DELIMITER ;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
 /*!50001 SET character_set_client      = utf8mb4 */;
 /*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `vw_emprestimos_atrasados` AS select `e`.`id` AS `emprestimo_id`,`e`.`usuario_id` AS `usuario_id`,`u`.`nome` AS `usuario_nome`,`e`.`livro_id` AS `livro_id`,`l`.`titulo` AS `livro_titulo`,`e`.`data_emprestimo` AS `data_emprestimo`,`e`.`data_prevista_devolucao` AS `data_prevista_devolucao`,(to_days(curdate()) - to_days(`e`.`data_prevista_devolucao`)) AS `dias_atraso` from ((`emprestimo` `e` join `usuario` `u` on((`u`.`id` = `e`.`usuario_id`))) join `livro` `l` on((`l`.`id` = `e`.`livro_id`))) where ((`e`.`data_devolucao` is null) and (`e`.`data_prevista_devolucao` < curdate())) */;

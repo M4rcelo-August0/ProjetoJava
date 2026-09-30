@@ -354,13 +354,14 @@ O script de criação está em [`database/schema.sql`](database/schema.sql).
 
 ## Como executar
 
-**Pré-requisitos:** JDK 21, MySQL e NetBeans. É preciso também o driver *MySQL Connector/J* adicionado ao projeto.
+**Pré-requisitos:** JDK 21, NetBeans e um servidor MySQL (MySQL Server ou o MySQL/MariaDB do XAMPP), mais o MySQL Workbench para rodar o script.
 
-1. Clone o repositório e abra a pasta no **NetBeans**.
-2. Execute o script `database/schema.sql` no MySQL (ele já cria o banco `biblioteca_db` e todas as tabelas). No Workbench: *File → Open SQL Script*, escolha o arquivo e clique no ícone de raio.
-3. Ajuste usuário, senha e porta do banco em `src/sistemabiblioteca/util/Conexao.java`.
-4. Adicione o `.jar` do *MySQL Connector/J* em *Properties → Libraries*.
-5. Execute a classe `sistemabiblioteca.app.Main` (tecla `F6`).
+1. Baixe o projeto (*Code → Download ZIP*) e extraia, ou clone o repositório, e abra a pasta no **NetBeans** (*File → Open Project*).
+2. Inicie o servidor MySQL (no XAMPP, botão *Start* do MySQL).
+3. No **MySQL Workbench**, conecte no servidor, abra o arquivo `database/schema.sql` (*File → Open SQL Script*) e execute com o ícone de raio. O script cria o banco `biblioteca_db`, as tabelas, a view e a procedure.
+4. Ajuste a conexão em `src/sistemabiblioteca/util/Conexao.java`: porta (`3306` no XAMPP), usuário e senha. No XAMPP padrão o usuário é `root` e a senha é vazia (`""`).
+5. O driver **MySQL Connector/J 9.3.0** deve estar em `lib/mysql-connector-j-9.3.0.jar`. Se o NetBeans mostrar o projeto com erro de biblioteca, clique com o botão direito no projeto → *Properties → Libraries → Add JAR/Folder* e selecione esse arquivo.
+6. Execute o projeto (tecla `F6`). A classe principal é `sistemabiblioteca.app.Main`.
 
 ---
 
