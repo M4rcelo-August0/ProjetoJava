@@ -2,6 +2,7 @@
 
 Projeto acadêmico de um sistema desktop para controlar o acervo, os usuários e o **empréstimo e a devolução de livros** de uma biblioteca.
 
+**Curso:** Padrões de Projeto  
 **Tecnologias:** Java · MySQL · NetBeans
 
 ---
@@ -111,7 +112,7 @@ Durante o empréstimo, as linhas do usuário/carteira e do livro são travadas (
 
 ## 🗂 Organização do código
 
-O projeto usa **arquitetura em camadas** (MVC com DAO):
+O projeto usa **arquitetura em camadas** e aplica os padrões **MVC** (Model-View-Controller) e **DAO** (Data Access Object), que separam a interface, as regras de entrada e o acesso ao banco de dados:
 
 ```
 SistemaBiblioteca/
@@ -365,5 +366,7 @@ O script de criação está em [`database/schema.sql`](database/schema.sql).
 
 ## 👥 Nomes
 
-- Marcelo
-- Guilherme
+| Nome | RGM |
+|---|---|
+| Marcelo Augusto Ferreira Silva | 11262200985 |
+| Guilherme Matos Andrade da Silva | 11262401464 |
